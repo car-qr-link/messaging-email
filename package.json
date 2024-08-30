@@ -26,7 +26,6 @@
   "dependencies": {
     "@car-qr-link/apis": "github:car-qr-link/apis",
     "@car-qr-link/messaging-base": "github:car-qr-link/messaging-base",
-    "dotenv": "^16.4.5",
-    "unisender-ts": "^0.0.5"
+    "dotenv": "^16.4.5"
   }
 }

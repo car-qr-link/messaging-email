@@ -1,4 +1,4 @@
-import { send } from "unisender-ts";
+import { send } from "../unisender";
 import { LOGO_IMAGE, TEMPLATE } from "./template";
 
 export class Gateway {
@@ -28,7 +28,7 @@ export class Gateway {
                 new Date().getFullYear().toString()
             );
 
-        await send(
+        const result = await send(
             this.baseUrl,
             this.apiKey,
             {
@@ -47,11 +47,10 @@ export class Gateway {
                     subject: "Уведомление от Car QR Link",
                     from_email: 'no-reply@carqr.link',
                     from_name: 'Car QR Link',
-                    options: {
-                        custom_backend_id: undefined,
-                    },
                 },
             }
         );
+
+        // console.log(result);
     }
 }
