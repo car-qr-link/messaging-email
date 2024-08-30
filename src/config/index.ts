@@ -10,7 +10,7 @@ export interface Config {
 
 export const config: Config = {
     BROKER_URL: process.env.BROKER_URL || 'redis://localhost:6379/0',
-    SEND_QUEUE: process.env.SEND_QUEUE || 'messages:send:telegram',
+    SEND_QUEUE: process.env.SEND_QUEUE || 'messages:send:email',
     RECEIVED_QUEUE: process.env.RECEIVED_QUEUE || 'messages:received',
 
     GATEWAY_URL: process.env.GATEWAY_URL || '',
