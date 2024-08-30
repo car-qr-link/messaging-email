@@ -13,5 +13,5 @@ export const config: Config = {
     SEND_QUEUE: process.env.SEND_QUEUE || 'messages:send:email',
     RECEIVED_QUEUE: process.env.RECEIVED_QUEUE || 'messages:received',
 
-    GATEWAY_URL: process.env.GATEWAY_URL || '',
+    GATEWAY_URL: process.env.GATEWAY_URL || 'https://go1.unisender.ru/ru/transactional/api/v1',
 }
