@@ -1,0 +1,19 @@
+services:
+  app:
+    image: ghcr.io/car-qr-link/messaging-email:latest
+    networks:
+      - internal
+    environment:
+      - NODE_ENV=production
+      - BROKER_URL=redis://redis:6379/0
+      - GATEWAY_URL=${GATEWAY_URL}
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+        reservations:
+          memory: 64M
+
+networks:
+  internal:
+    external: true

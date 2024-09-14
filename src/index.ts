@@ -1,8 +1,7 @@
 import { createLogger, createQueueClient } from "@car-qr-link/messaging-base";
 import { config } from "./config/index";
-import { SenderService } from "./services/sender";
-import { LOGO_IMAGE } from "./gateway/template";
 import { Gateway } from "./gateway/index";
+import { SenderService } from "./services/sender";
 
 async function main() {
     const logger = createLogger();
