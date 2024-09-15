@@ -5,7 +5,7 @@ services:
       - internal
     environment:
       - NODE_ENV=production
-      - BROKER_URL=redis://redis:6379/0
+      - BROKER_URL=${BROKER_URL}
       - GATEWAY_URL=${GATEWAY_URL}
     deploy:
       resources:
